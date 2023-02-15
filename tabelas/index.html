@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    table{
+      border: 1px black solid;
+    }
+    table tr td, 
+    table tr th
+     {
+      border: 1px black solid;      
+    }
+    table, th, td, caption{
+      border-collapse: collapse;
+      padding: 10px;
+    }
+    caption{
+      border-top: 1px solid black;
+      border-left: 1px solid black;
+      border-right: 1px solid black;
+    }
+    tfoot td{
+      text-align: center;
+    }
+  </style>
+
+</head>
+<body>  
+
+  <table>
+
+    <caption>Preços de cursos</caption>
+    <thead>
+      <tr>
+        <th rowspan="2">Titulo Coluna 1</th>
+        <th>Titulo Coluna 2</th>
+        <th>Titulo Coluna 3</th>
+      </tr>
+    </thead>
+    
+    <tfoot>
+      <tr>
+        <td colspan="4"> &copy; Todos os direitos reservados</td>
+      </tr>
+     </tfoot>
+
+   <tbody>
+    <tr>
+      <td colspan="2">coluna conteudo</td>
+      <td>coluna conteudo</td>
+      <td>coluna conteudo</td>
+    </tr>
+    <tr>
+      <td>coluna conteudo</td>
+      <td>coluna conteudo</td>
+      <td>coluna conteudo</td>
+    </tr>
+   </tbody> 
+  
+  </table>
+
+</body>
+</html>
