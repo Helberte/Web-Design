@@ -7,8 +7,52 @@
   <title>Document</title>
 
   <style>
+    *{
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      box-sizing: border-box;
+    }
     form input{
       outline: 0;
+    }
+    form{
+      width: 300px;
+      margin: auto;
+    }
+    form fieldset{
+      display: flex;
+      flex-direction: column;
+    }
+    h1{
+      width: 300px;
+      margin: auto;
+      padding-bottom: 30px;
+    }
+    form label{
+      margin-top: 15px;
+    }
+    .txt, .txt{
+      height: 40px;
+      padding: 8px;
+      font-size: 15px;
+      border-radius: 5px;
+      border: solid 1px #ccc;
+    }
+    .txt:focus{
+      background-color: rgb(241, 241, 241);
+      border: solid 1px #ccc;      
+    }
+    .button-submit{
+      margin-top: 30px;
+      width: 150px;
+      align-self: center;
+      height: 40px;
+      border: none;
+      background-color: rgb(140, 172, 107);
+      color: white;
+      font-size: 18px;
+      font-weight: 500;
+      border-radius: 6px;
+      box-shadow: 1px 1px 10px 1px rgba(0,0,0,.3);
     }
   </style>
 
@@ -16,10 +60,21 @@
 <body>
 
   <h1>Meu formulario</h1>
-  <form action="https://google.com/search" method="GET" target="_blank">
-    <input type="text" name="q" id="email">
+  <form action="#" method="post">
+    
+    <fieldset>
 
-    <input type="submit" value="Enviar">
+      <legend>Login</legend>
+
+      <label for="user">Usuário</label>
+      <input class="txt" type="email" name="user" id="user" autocomplete="on" autofocus placeholder="Digite seu usuário" maxlength="200">
+  
+      <label for="password">Password</label>
+      <input placeholder="Digite sua senha" class="txt" type="password" id="password" maxlength="15">
+  
+      <input class="button-submit" type="submit" value="Enviar">
+    </fieldset>
+    
   </form>
   
 </body>
