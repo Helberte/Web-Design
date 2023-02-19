@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+    input[type="checkbox"]{
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      display: block;
+
+      transition: all ease 0.5s;
+    }
+    input[type="checkbox"]:checked{
+      width: 50px;
+      height: 50px;
+    }
+
+   
+    div:focus{
+      background-color: red;
+    }
+    input[class="teste"] + p{
+      display: none;
+    }
+    input[class="teste"]:invalid + p{
+      display: block;
+    }
+
+    /*  pega o elemento p numero 4 que realmente é um paragrafo */
+    .container p:nth-of-type(4){
+      background-color: yellow;
+    }
+
+    .content p::first-letter{
+      float: left;
+      font-size: 5rem;
+      display: block;
+      margin-right: 5px;
+      line-height: 5rem;
+    }
+    p{
+      text-align: justify;
+    }
+    .content p::selection{
+      background-color: #ccc;
+    }
+    .content p::-moz-selection{
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="content">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis illum impedit aperiam vel et. Reiciendis labore obcaecati quasi harum, explicabo, natus, placeat unde consequatur deserunt blanditiis cumque dolorem esse autem?
+      Enim natus temporibus perferendis ad in, voluptas necessitatibus magnam deleniti obcaecati, aliquam ipsa. Perspiciatis ab ratione id ut quas saepe quo delectus, in, recusandae corrupti commodi minus mollitia, nulla tempore.
+      Possimus totam consequatur numquam sequi placeat dolores modi aliquid ipsam quasi illo, animi sint, voluptate rerum ducimus, architecto voluptatum sunt rem nisi natus quis. Est ipsam fugit numquam alias ipsum!
+      Voluptatum, quae debitis tempore amet quam ipsum ipsa cum illo incidunt similique mollitia iure perferendis officia, delectus at aliquid eveniet odit saepe eligendi cumque quisquam earum quod. Doloremque, sunt et.
+      Id nulla esse inventore corrupti atque rerum, ratione a autem voluptatem nam molestiae architecto? Odit, molestiae alias id fuga fugiat tenetur impedit rerum aspernatur commodi quidem molestias dolorum voluptate eaque?</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis illum impedit aperiam vel et. Reiciendis labore obcaecati quasi harum, explicabo, natus, placeat unde consequatur deserunt blanditiis cumque dolorem esse autem?
+      Enim natus temporibus perferendis ad in, voluptas necessitatibus magnam deleniti obcaecati, aliquam ipsa. Perspiciatis ab ratione id ut quas saepe quo delectus, in, recusandae corrupti commodi minus mollitia, nulla tempore.
+      Possimus totam consequatur numquam sequi placeat dolores modi aliquid ipsam quasi illo, animi sint, voluptate rerum ducimus, architecto voluptatum sunt rem nisi natus quis. Est ipsam fugit numquam alias ipsum!
+      Voluptatum, quae debitis tempore amet quam ipsum ipsa cum illo incidunt similique mollitia iure perferendis officia, delectus at aliquid eveniet odit saepe eligendi cumque quisquam earum quod. Doloremque, sunt et.
+      Id nulla esse inventore corrupti atque rerum, ratione a autem voluptatem nam molestiae architecto? Odit, molestiae alias id fuga fugiat tenetur impedit rerum aspernatur commodi quidem molestias dolorum voluptate eaque?</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis illum impedit aperiam vel et. Reiciendis labore obcaecati quasi harum, explicabo, natus, placeat unde consequatur deserunt blanditiis cumque dolorem esse autem?
+      Enim natus temporibus perferendis ad in, voluptas necessitatibus magnam deleniti obcaecati, aliquam ipsa. Perspiciatis ab ratione id ut quas saepe quo delectus, in, recusandae corrupti commodi minus mollitia, nulla tempore.
+      Possimus totam consequatur numquam sequi placeat dolores modi aliquid ipsam quasi illo, animi sint, voluptate rerum ducimus, architecto voluptatum sunt rem nisi natus quis. Est ipsam fugit numquam alias ipsum!
+      Voluptatum, quae debitis tempore amet quam ipsum ipsa cum illo incidunt similique mollitia iure perferendis officia, delectus at aliquid eveniet odit saepe eligendi cumque quisquam earum quod. Doloremque, sunt et.
+      Id nulla esse inventore corrupti atque rerum, ratione a autem voluptatem nam molestiae architecto? Odit, molestiae alias id fuga fugiat tenetur impedit rerum aspernatur commodi quidem molestias dolorum voluptate eaque?</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis illum impedit aperiam vel et. Reiciendis labore obcaecati quasi harum, explicabo, natus, placeat unde consequatur deserunt blanditiis cumque dolorem esse autem?
+      Enim natus temporibus perferendis ad in, voluptas necessitatibus magnam deleniti obcaecati, aliquam ipsa. Perspiciatis ab ratione id ut quas saepe quo delectus, in, recusandae corrupti commodi minus mollitia, nulla tempore.
+      Possimus totam consequatur numquam sequi placeat dolores modi aliquid ipsam quasi illo, animi sint, voluptate rerum ducimus, architecto voluptatum sunt rem nisi natus quis. Est ipsam fugit numquam alias ipsum!
+      Voluptatum, quae debitis tempore amet quam ipsum ipsa cum illo incidunt similique mollitia iure perferendis officia, delectus at aliquid eveniet odit saepe eligendi cumque quisquam earum quod. Doloremque, sunt et.
+      Id nulla esse inventore corrupti atque rerum, ratione a autem voluptatem nam molestiae architecto? Odit, molestiae alias id fuga fugiat tenetur impedit rerum aspernatur commodi quidem molestias dolorum voluptate eaque?</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis illum impedit aperiam vel et. Reiciendis labore obcaecati quasi harum, explicabo, natus, placeat unde consequatur deserunt blanditiis cumque dolorem esse autem?
+      Enim natus temporibus perferendis ad in, voluptas necessitatibus magnam deleniti obcaecati, aliquam ipsa. Perspiciatis ab ratione id ut quas saepe quo delectus, in, recusandae corrupti commodi minus mollitia, nulla tempore.
+      Possimus totam consequatur numquam sequi placeat dolores modi aliquid ipsam quasi illo, animi sint, voluptate rerum ducimus, architecto voluptatum sunt rem nisi natus quis. Est ipsam fugit numquam alias ipsum!
+      Voluptatum, quae debitis tempore amet quam ipsum ipsa cum illo incidunt similique mollitia iure perferendis officia, delectus at aliquid eveniet odit saepe eligendi cumque quisquam earum quod. Doloremque, sunt et.
+      Id nulla esse inventore corrupti atque rerum, ratione a autem voluptatem nam molestiae architecto? Odit, molestiae alias id fuga fugiat tenetur impedit rerum aspernatur commodi quidem molestias dolorum voluptate eaque?</p>
+  </div>
+  
+
+  <label>    
+    <input type="checkbox" name="checkbox" id="teste" value="sim">
+    Aceito os termos
+  </label>
+  
+
+  <input type="text" name="" id="" value="teste" disabled >
+
+  <div tabindex="1">Teste div</div>
+  <div tabindex="2">Teste div</div>
+  <div tabindex="3">Teste div</div>
+  <div tabindex="4">Teste div</div>
+  <div tabindex="5">Teste div</div>
+  <div tabindex="6">Teste div</div>
+  <div tabindex="7">Teste div</div>
+  <div tabindex="8">Teste div</div>
+  <div tabindex="9">Teste div</div>
+  <div tabindex="10">Teste div</div>
+
+  <div>
+    <input type="email" class="teste" max="15" placeholder="Seu nome aqui">
+    <p>Não permitido</p>
+  </div>
+  
+  <div class="container">
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <hr>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <hr>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+  </div>
+
+</body>
+</html>
