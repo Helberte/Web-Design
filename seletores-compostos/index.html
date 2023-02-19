@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+  <style>
+    h1, h2, h3{
+      margin: 1rem 0;
+    }
+
+    .container h1 + h2{
+      color: yellow;
+    }
+
+    ul li:last-child{
+      color: rgb(24, 116, 197);
+      background-color: yellow;
+    }
+   
+    .div-para h2 ~ p{
+      background-color: black;
+      color: white;
+    }
+
+    /* estou pegando  todos os li que tem o atributo title */
+    ul li[title]{
+      background-color: red;
+    }
+
+    img[alt="goku"]{
+      height: 200px;
+      width: 200px;
+      object-fit: cover;
+    }
+
+    /* pegando todos os inputs cujo atributo autocomplete inicia com "o" */
+    input[autocomplete^="o"]{
+      background-color: orange;
+      border: none;
+      height: 45px;
+      width: 400px;
+      border-radius: 15px;
+      color: black;
+      font-size: 1.5rem;
+      padding: 5px 15px;
+      box-sizing: border-box;
+      outline: 0;
+      border: solid 0px black;
+
+      transition: all ease 0.5s;
+      
+    }
+    input[autocomplete^="o"]:focus{
+      border-width: 2px;
+    }
+   
+    /* pegando todas as imagens que finalizam com jpeg */
+    img[src$="jpeg"]{
+      border-radius: 10px;
+      box-shadow: 0 0 10px 3px rgba(0,0,0,0.5);
+      margin: auto;
+      display: block;
+    }
+
+    div:not([class]){
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+    }
+
+    /* se o placerolder não estiver aparecendo, o elemento continua com a borda */
+    input:not(:placeholder-shown){
+      border: solid 2px black;
+    }    
+    .texto{
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .texto label{
+      display: block;
+      position: absolute;
+      left: 15px;
+      font-size: 1.5rem;
+      top: 5px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+      transition: all .3s ease-in-out;
+    }
+    input::placeholder{
+      opacity: 0;
+    }   
+    input:focus + label{
+      top: -25px;
+      font-size: 1.3rem;
+      left: 5px;
+    }
+    input:not(:placeholder-shown) + label{
+      top: -25px;
+      font-size: 1.3rem;
+      left: 5px;
+    }
+
+    /*  pegando o li que é o 4 na lista */
+    ul li:nth-child(4){
+      background-color: aliceblue;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>teste 1</h1> 
+    <h2>teste 2</h2>
+    <h3>teste 3</h3>
+  </div>
+ 
+  <ul>
+    <li>teste</li>
+    <li title="teste">teste</li>
+    <li title="teste">teste</li>
+    <li title="teste">Quarto</li>
+    <li title="teste">teste</li>
+  </ul>
+  <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis delectus blanditiis quia magnam ipsam neque. Beatae laborum, totam reprehenderit expedita ex ipsum assumenda sit dolorem optio commodi ratione rerum suscipit.</p>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti autem corrupti obcaecati quo minima porro nisi fugiat, quidem itaque, aperiam architecto incidunt corporis beatae cum inventore fuga laboriosam quas. Totam.</p>
+
+  <div class="texto">
+    <input id="text" placeholder="Seu nome aqui" type="text" autocomplete="on">
+    <label for="text">Nome</label>
+    
+  </div>
+  
+
+  <div class="div-para">
+    <h2>teste</h2>
+    <p>paragrafo</p>
+    <p>paragrafo</p>
+    <p>paragrafo</p>
+    <p>paragrafo</p>
+    <p>paragrafo</p>
+  </div>
+
+  <div>
+
+  </div>
+
+  <img src="https://observatoriodocinema.uol.com.br/wp-content/uploads/2022/01/goku.jpeg" alt="goku">
+</body>
+</html>
