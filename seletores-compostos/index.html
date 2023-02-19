@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 
-
   <style>
+    *{
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
     h1, h2, h3{
       margin: 1rem 0;
     }
@@ -109,6 +111,11 @@
     ul li:nth-child(4){
       background-color: aliceblue;
     }
+
+    /* quando selecionamos as letras */
+    p::selection{
+      background-color: yellow;
+    }
   </style>
 </head>
 <body>
@@ -130,10 +137,8 @@
 
   <div class="texto">
     <input id="text" placeholder="Seu nome aqui" type="text" autocomplete="on">
-    <label for="text">Nome</label>
-    
+    <label for="text">Nome</label>    
   </div>
-  
 
   <div class="div-para">
     <h2>teste</h2>
@@ -144,9 +149,7 @@
     <p>paragrafo</p>
   </div>
 
-  <div>
-
-  </div>
+  <div></div>
 
   <img src="https://observatoriodocinema.uol.com.br/wp-content/uploads/2022/01/goku.jpeg" alt="goku">
 </body>
