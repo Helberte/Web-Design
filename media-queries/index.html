@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media queries</title>
+
+
+  <style>
+
+    body{
+      background-color: #ccc;
+      font-size: 16px;
+      font-family: sans-serif;
+    }
+
+    @media screen and (min-width: 400px){
+      body{
+        background-color: olivedrab;
+      }
+     
+      .container div{
+        width: 48%;
+        float: left;
+        margin-bottom: 0!important;
+        margin: 1%;
+      }
+    }
+
+    .clearfix::after{
+      content: " ";
+      display: block;
+      clear: both;
+    }
+    .teste{
+      background-color: red;
+      width: 320px;
+      height: 50px;
+    }
+
+    .container{
+      background-color: white;
+      padding: 15px;
+    }
+    .container div{
+      background-color: #794a4a;
+      margin-bottom: 15px;
+      height: 150px;
+      font-size: 1.2rem;
+    }
+    p{
+      font-size: 1.3rem;
+    }
+  </style>
+</head>
+<body>
+  
+
+  <h1>Exemplo de media queries</h1>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur magni autem omnis veritatis odit assumenda alias adipisci sunt rem minima minus doloremque maiores laboriosam praesentium non ad tenetur, molestiae quidem.</p>
+
+  <!-- <div class="teste"> -->
+
+  </div>
+
+  <div class="container clearfix">
+    <div class="div-1">div 1</div>
+    <div class="div-2">div 2</div>
+  </div>
+</body>
+</html>
