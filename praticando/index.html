@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    a{
+      display: flex;
+      text-decoration: none;
+      color: black;
+      margin: 15px;
+      align-items: center;
+
+    }
+    a[target="_blank"]::after{
+      content: url(link-externo.svg);
+      margin-left: 5px;
+      display: block;
+    }
+
+    .container span{
+      display: none;
+      width: 12px;
+      height: 12px;
+      background-color: black;
+      border-radius: 50%;
+      margin-right: 5px;
+
+    }
+    .container input:checked + span{
+      display: inline-block;
+    }
+    .container input{
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      position: absolute;
+    }
+    .container label::before{
+      content: "";
+      height: 18px;
+      width: 18px;
+      display: block;
+      border: solid 2px blue;
+      position: absolute;
+      border-radius: 50%;
+      left: -24.6px;
+      top: -1.8px;
+    }
+    .container{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: row;
+      position: relative;
+      height: 25px;
+      margin-top: 100px;
+    }
+    .container label{
+      position: absolute;
+      left: 20px;
+    }
+    
+
+
+    /* label span{
+      display: inline-block;
+      width: 55px;
+      height: 28px;
+      background-color: #ccc;
+      border-radius: 14px;
+    }
+    label input::after{
+      content: "";
+      display: block;
+      width: 22px;
+      height: 22px;
+      background-color: #837c7c;
+      position: absolute;
+      top: 0;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    label input{
+      width: 0;
+      height: 0;
+      left: 0;
+      top: 0;
+      position: absolute;
+
+      transition: all .3s ease-in-out;
+    }
+    label{
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+    }
+    label input:checked{
+      left: 26px;
+    } */
+
+
+
+    .span-circle{
+      display: inline-block;
+      width: 60px;
+      height: 30px;
+      background-color: #ccc;
+      border-radius: 15px;
+    }
+    .span-circle::before{
+      content: "";
+      width: 22px;
+      height: 22px;
+      background-color: #534d4d;
+      display: block;
+      border-radius: 50%;
+      margin: 4px;
+
+      transition: all .3s ease-in-out;
+    }
+    .lbl-container input:checked + span::before{
+      margin-left: 34px;
+      background-color: rgb(133, 163, 26);
+    }
+    .lbl-container{
+      position: relative;
+      
+    }
+    .lbl-container input{
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .input-check:focus + span{
+      outline: 2px solid black;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- <label>
+    <input type="checkbox">
+    <span></span>
+    Esporte
+  </label> -->
+
+  <label class="lbl-container">
+    <input tabindex="1" type="checkbox" class="input-check">
+    <span class="span-circle"></span>
+    Esporte
+  </label>
+  <label class="lbl-container">
+    <input tabindex="2" type="checkbox" class="input-check">
+    <span class="span-circle"></span>
+    Esporte
+  </label>
+  <label class="lbl-container">
+    <input tabindex="3" type="checkbox" class="input-check">
+    <span class="span-circle"></span>
+    Esporte
+  </label>
+  <label class="lbl-container">
+    <input tabindex="4" type="checkbox" class="input-check">
+    <span class="span-circle"></span>
+    Esporte
+  </label>
+
+
+  <div class="container">
+    <input type="radio" name="" id="che">
+    <span></span>
+    <label for="che">Aceito os termos e privacidade</label>
+  </div>
+
+  <a href="#" target="_blank">Lorem ipsum dolor </a>
+  <a href="#" target="_blank">Lorem ipsum dolor </a>
+  <a href="#" >Lorem ipsum dolor </a>
+  <a href="#" target="_blank">Lorem ipsum dolor </a>
+  <a href="#" target="_blank">Lorem ipsum dolor </a>
+  <a href="#" target="_blank">Lorem ipsum dolor </a>
+</body>
+</html>
