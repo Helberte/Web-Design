@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    *{
+      font-family: sans-serif;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    article{
+      margin-top: 15px;
+    }
+    article a{
+      display: flex;
+      width: 100%;
+      height: 100%;
+
+      position: relative;
+      overflow: hidden;
+      cursor: auto;
+      align-items: center;
+      justify-content: center;
+    }
+    article a img{
+      display: block;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    article a .hiddem-div{
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: rgba(204, 204, 204,.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: auto;
+      border-radius: 50%;
+      overflow: hidden;
+      opacity: 0;
+      pointer-events: none;
+
+      transition: all .5s ease-in-out;
+    }
+    article a .hiddem-div button{
+      background-color: transparent;
+      height: 40px;
+      width: 150px;
+      border-radius: 20px;
+      color: rgb(255, 255, 255);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background-color: #ccc;
+      border: none;
+      box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5);
+      font-weight: 600;
+      cursor: pointer;
+    }
+    article a:hover  div{
+      overflow: hidden;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .container{
+      margin-top: 25px;
+      width: 370px;
+      height: 217px;
+    }
+    .container a{
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+    .container .img{
+      display: block;
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+    .container a::before{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0,.6);
+      position: absolute;
+      opacity: 0;
+
+      transition: all ease .5s;
+    }
+    .container a:hover::before{
+      opacity: 1;
+    }
+    .container a::after{
+      content: "Saiba mais";
+      padding: 7px 18px;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: solid 2px white;
+      color: white;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 2px;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: all ease .5s;
+    }
+    .container a:hover::after{
+      opacity: 1;
+    }
+
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <a href="#">
+      <img src="thumbs/03.jpg" alt="">
+    </a>
+  </div>
+
+  <article>
+    <a href="#">
+      <div class="hiddem-div">
+        <button>Saiba mais</button>
+      </div>
+      <img src="thumbs/01.jpg" alt="">
+    </a>
+  </article>
+
+  <article>
+    <a href="#">
+      <div class="hiddem-div">
+        <button>Saiba mais</button>
+      </div>
+      <img src="thumbs/02.jpg" alt="">
+    </a>
+  </article>
+
+  <article>
+    <a href="#">
+      <div class="hiddem-div">
+        <button>Saiba mais</button>
+      </div>
+      <img src="thumbs/03.jpg" alt="">
+    </a>
+  </article>
+  <article>
+    <a href="#">
+      <div class="hiddem-div">
+        <button>Saiba mais</button>
+      </div>
+      <img src="thumbs/04.jpg" alt="">
+    </a>
+  </article>
+  <article>
+    <a href="#">
+      <div class="hiddem-div">
+        <button>Saiba mais</button>
+      </div>
+      <img src="thumbs/05.jpg" alt="">
+    </a>
+  </article>
+  <article>
+    <a href="#">
+      <div class="hiddem-div">
+        <button>Saiba mais</button>
+      </div>
+      <img src="thumbs/06.jpg" alt="">
+    </a>
+  </article>
+  
+</body>
+</html>
