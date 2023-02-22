@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body{
+      margin: 0;
+      overflow-x: hidden;
+    }
+    picture img{
+      display: block;
+    }
+   
+  </style>
+</head>
+<body>
+  
+
+  <picture>
+    <source media="(min-width: 1000px)" sizes="100vw" srcset="./1000.jpg 1000w">
+    <source media="(min-width: 800px)" sizes="90vw" srcset="./mar-640-427.jpg 640w">
+    <source media="(min-width: 500px)" sizes="50vw" srcset="./300.jpg 300w">
+    
+    <img src="./mar-1280-823.jpg" alt="teste">
+  </picture>
+</body>
+</html>
