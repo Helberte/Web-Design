@@ -69,16 +69,69 @@
       background-clip: content-box;
       width: 600px;
     }
+   
     .grupo-cores div:nth-child(10){
-      background-image: radial-gradient(circle, red, blue);
+      background-image: radial-gradient(closest-corner at 10% 80%, yellow, black);
       background-clip: content-box;
-      width: 600px;
+      width: 700px;
     }
-    .grupo-cores div:nth-child(10){
-      background-image: radial-gradient(rgba(0, 0, 0), transparent 80%);
+    .grupo-cores div:nth-child(11){
+      background-image: radial-gradient(closest-side at 50% 85%, black, transparent);
+      /* closest-corner = o radial fica espremido
+      
+      at 50% 90%
+      1° valor = representa o eixo X
+      2° valor = representa o eixo Y
+
+      closest-corner = canto mais proximo
+      closest-side = lado mais próximo
+      farthest-side = lado mais distante
+      farthest-corner = canto mais distante
+
+      */
       background-clip: content-box;
+      width: 700px;
     }
-    
+    .grupo-cores div:nth-child(12){
+      background-image: radial-gradient(farthest-side at 10% 50%, black, yellow);
+      
+
+      background-clip: content-box;
+      width: 700px;
+    }
+    .grupo-cores div:nth-child(13){
+      background-image: radial-gradient(farthest-corner at 50% 90%, black, yellow);
+      
+      /* 
+      a diferestça entre closest-side e farthest-side é que ele não espreme a
+      elipse
+      farthest-side não espreme a elipse
+      
+      */
+
+      background-clip: content-box;
+      width: 700px;
+    }
+    .grupo-cores div:nth-child(14){
+      background-image: radial-gradient( farthest-corner at 50% 90%, rgba(0,0,0,.8), transparent);
+      
+      /* 
+      a diferestça entre closest-side e farthest-side é que ele não espreme a
+      elipse
+      farthest-side não espreme a elipse
+      
+      */
+
+      background-clip: content-box;
+      width: 700px;
+    }
+  
+    .grupo-cores div:nth-child(15){
+      width: 700px;
+      background-image: radial-gradient(closest-corner at 50% 25%, black, transparent);
+      background-position: center -90px;
+      background-repeat: no-repeat;
+    }
     
     .grupo-cores div p{
       line-height: 1.4;
