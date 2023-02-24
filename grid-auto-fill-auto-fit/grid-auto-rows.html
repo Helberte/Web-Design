@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+  <style>
+    .gridContainer{
+      background-color: #ccc;
+      display: grid;
+      gap: 5px;
+      width: 80%;
+      margin: auto;
+
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      grid-auto-rows: 100px;
+    }
+    .gridItem{
+      background-color: rgb(98, 148, 98);
+      padding: 10px;
+      box-sizing: border-box;
+      font-family: sans-serif;
+      font-weight: bold;
+    }
+  </style>
+
+</head>
+<body>
+  <h2>Grid Layout</h2>
+
+
+  <div class="gridContainer">
+    <div class="gridItem">1</div>
+    <div class="gridItem">2</div>
+    <div class="gridItem">3</div>
+    <div class="gridItem">4</div> 
+    <div class="gridItem">5</div>
+    <div class="gridItem">6</div>
+    <div class="gridItem">7</div>
+    <div class="gridItem">8</div>
+    <div class="gridItem">9</div>
+    <div class="gridItem">10</div>
+    <div class="gridItem">11</div>
+    <div class="gridItem">12</div>
+  </div>
+</body>
+</html>
