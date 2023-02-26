@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+    #slide-externo{
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+    }
+    #slide-interno{
+      height: 100%;
+      width: auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      animation-fill-mode: both;
+      animation: slideshow 30s cubic-bezier(.2,-0.5,.86,1.59) infinite alternate 2s both;
+
+    }
+    #slide-interno img{
+      height: 100%;
+      width: 100vw;
+      object-fit: cover;
+    }
+
+    @keyframes slideshow{
+            
+      0%{
+        transform: translateX(0);
+      }
+      17%{
+        transform: translateX(0);
+      }
+      20%{
+        transform: translateX(-100vw);
+      }  
+      37%{
+        transform: translateX(-100vw);
+      }   
+      40%{
+        transform: translateX(-200vw);
+      }
+      57%{
+        transform: translateX(-200vw);
+      }
+      60%{
+        transform: translateX(-300vw);
+      }
+      77%{
+        transform: translateX(-300vw);
+      }
+      80%{
+        transform: translateX(-400vw);
+      }      
+      93%{
+        transform: translateX(-400vw);
+      }
+      95%{
+        transform: translateX(-500vw);
+      }
+      100%{
+        transform: translateX(-500vw);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="slide-externo">
+    <div id="slide-interno">
+      <img src="1.jpg" alt="">
+      <img src="2.jpg" alt="">
+      <img src="3.jpg" alt="">
+      <img src="4.jpg" alt="">
+      <img src="5.jpg" alt="">
+      <img src="6.jpg" alt="">
+    </div>
+  </div>
+</body>
+</html>
