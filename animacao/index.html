@@ -5,33 +5,55 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-  <script src="script.js"></script>
-
+  
   <style>
 
-    .container{
+    #container div{
       width: 100px;
       height: 100px;
-      background-color: red;     
-      transition: all .3s ease;
-      animation: teste 2s ease-in-out;
-    }
-    div.active{
-      
+      background-color: red;           
+      border: solid 2px black;
     }
 
+    #container div:nth-child(1){
+      animation: teste 2s ease-in-out;
+    }
+    #container div:nth-child(2){
+      /* animation-name: teste;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: ease-in-out; 
+      animation-fill-mode: both;    
+      animation-play-state: running;      
+      
+      */
+      animation: teste 2s ease-in-out 3 alternate;
+    } 
+    #container div:nth-child(3){
+      animation: teste 2s ease-in-out 2 2s alternate;
+    }
+    #container div:nth-child(4){
+      animation: teste 2s ease-in-out 2 2s alternate;
+      animation-fill-mode: backwards;
+    }
+    #container div:nth-child(5){
+      animation: teste 2s ease-in-out infinite alternate;
+      animation-play-state: running;
+    }
+    #container div:nth-child(5):hover{
+      animation-play-state: paused;
+    }
     @keyframes teste{
       0%{
-        background-color: red;
+        background-color: yellow;
         width: 100px;
       }      
       60%{
-        background-color: yellow;
+        background-color: red;
         transform: translateX(200px);
         width:300px;
-      }
-     
+      }     
       100%{
         transform: translateX(400px);
         width: 100px;
@@ -44,11 +66,14 @@
   
   <h2>Animation</h2>
 
-  <div class="container">
-    <div class="cont">1</div>
+  <div id="container" class="container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
   </div>
 
-  <button class="container__filho">clique</button>
 
 </body>
 </html>
