@@ -10,27 +10,28 @@
   <script>
 
     var n1 = prompt("numero 1");
-    var n2 = prompt("numero 2");
+    var n2 = prompt("numero 2");    
+    var texto = "";
     var sort;
- 
+
     if (n1 == n2){
       alert("empate");
-    }else{
+    }else{      
       sort = parseInt(Math.random() * 2);
 
-      if (sort == 0){
-        if(n1 < n2){
-          alert("Numero sorteado: " + sort + ". Jogador 1 ganhou\nJogador 1 = " + n1 + "\nJogador 2 = " + n2);
-        }else{
-          alert("Numero sorteado: " + sort + ". Jogador 2 ganhou\nJogador 1 = " + n1 + "\nJogador 2 = " + n2);
-        }
-      }else if (sort == 1){
-        if(n1 > n2){
-          alert("Numero sorteado: " + sort + ". Jogador 1 ganhou\nJogador 1 = " + n1 + "\nJogador 2 = " + n2);
-        }else{
-          alert("Numero sorteado: " + sort + ". Jogador 2 ganhou\nJogador 1 = " + n1 + "\nJogador 2 = " + n2);
-        }
+      texto = "Numero sorteado: " + sort + ". Jogador 2 ganhou\nJogador 1 = " + n1 + "\nJogador 2 = " + n2;
+      if(n1 > n2){
+        texto = "Numero sorteado: " + sort + ". Jogador 1 ganhou\nJogador 1 = " + n1 + "\nJogador 2 = " + n2;
       }
+      
+      if (sort == 0){
+
+        texto = "Numero sorteado: " + sort + ". Jogador 2 ganhou\nJogador 1 = " + n1 + "\nJogador 2 = " + n2;
+        if(n1 < n2){
+          texto = "Numero sorteado: " + sort + ". Jogador 1 ganhou\nJogador 1 = " + n1 + "\nJogador 2 = " + n2;
+        }
+      }        
+      alert(texto);      
     }
 
   </script>
