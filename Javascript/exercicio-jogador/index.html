@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    var n1 = prompt("numero 1");
+    var n2 = prompt("numero 2");
+    var sort;
+ 
+    if (n1 == n2){
+      alert("empate");
+    }else{
+      sort = parseInt(Math.random() * 2);
+
+      if (sort == 0){
+        if(n1 < n2){
+          alert("Numero sorteado: " + sort + ". Jogador 1 ganhou\nJogador 1 = " + n1 + "\nJogador 2 = " + n2);
+        }else{
+          alert("Numero sorteado: " + sort + ". Jogador 2 ganhou\nJogador 1 = " + n1 + "\nJogador 2 = " + n2);
+        }
+      }else if (sort == 1){
+        if(n1 > n2){
+          alert("Numero sorteado: " + sort + ". Jogador 1 ganhou\nJogador 1 = " + n1 + "\nJogador 2 = " + n2);
+        }else{
+          alert("Numero sorteado: " + sort + ". Jogador 2 ganhou\nJogador 1 = " + n1 + "\nJogador 2 = " + n2);
+        }
+      }
+    }
+
+  </script>
+</body>
+</html>
