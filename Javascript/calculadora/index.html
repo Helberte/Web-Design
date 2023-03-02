@@ -25,8 +25,12 @@
 
     valor();
 
-    function valor(){
+    function valor(){ 
       numero = parseFloat(prompt("Digite um numero."));
+      if (isNaN(numero)) {
+        alert("Digite somente número.");
+        valor();
+      }
     }
     result = numero;
 
@@ -66,8 +70,17 @@
           document.getElementById('content').innerHTML = result;
           break;
         case '/':
-          result = result / num;
-          document.getElementById('content').innerHTML = result;
+          try {
+            if (num === 0) {
+              throw "Divisão por zero.";
+            }else{
+              result = result / num;
+              document.getElementById('content').innerHTML = result;
+            }   
+          } catch (error) {
+            alert("Não é possível dividir por zero!");
+          }
+                 
           break;      
         default:
           alert('Invalid');
