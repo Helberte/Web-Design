@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+   
+  <button id="bt-limpar">Limpar</button>
+  
+  <button id="bt-mult">x</button>
+  <button id="bt-div">/</button>
+  <button id="bt-sub">-</button>
+  <button id="bt-soma">+</button>
+
+
+  <div id="content"></div>
+
+  <script>
+   
+    var numero = 0;
+    var result = 0;
+
+    valor();
+
+    function valor(){
+      numero = parseFloat(prompt("Digite um numero."));
+    }
+    result = numero;
+
+    document.getElementById('bt-mult').addEventListener('click', function(){
+      valor();
+      mult(numero);
+    });
+    document.getElementById('bt-div').addEventListener('click', function(){
+      valor();
+      div(numero);
+    });
+    document.getElementById('bt-sub').addEventListener('click', function(){
+      valor();
+      sub(numero);
+    });
+    document.getElementById('bt-soma').addEventListener('click', function(){
+      valor();
+      soma(numero);
+    });
+
+    document.getElementById('bt-limpar').addEventListener('click', function(){
+      document.getElementById('content').innerHTML = "";
+    })
+   
+    function mult(num){
+      result = result * num;
+      document.getElementById('content').innerHTML = result;
+    }
+    function div(num){
+      result = result / num;
+      document.getElementById('content').innerHTML = result;
+    }
+    function sub(num){
+      result = result - num;
+      document.getElementById('content').innerHTML = result;
+    }
+    function soma(num){
+      result = result + num;
+      document.getElementById('content').innerHTML = result;
+    }
+    document.getElementById('content').innerHTML = result;
+  </script>
+
+
+</body>
+</html>
