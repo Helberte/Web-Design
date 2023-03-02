@@ -32,41 +32,49 @@
 
     document.getElementById('bt-mult').addEventListener('click', function(){
       valor();
-      mult(numero);
+      calcular(numero, '*');
     });
     document.getElementById('bt-div').addEventListener('click', function(){
       valor();
-      div(numero);
+      calcular(numero, '/');
     });
     document.getElementById('bt-sub').addEventListener('click', function(){
       valor();
-      sub(numero);
+      calcular(numero, '-');
     });
     document.getElementById('bt-soma').addEventListener('click', function(){
       valor();
-      soma(numero);
+      calcular(numero, '+');
     });
 
     document.getElementById('bt-limpar').addEventListener('click', function(){
       document.getElementById('content').innerHTML = "";
     })
    
-    function mult(num){
-      result = result * num;
-      document.getElementById('content').innerHTML = result;
+    function calcular(num, op){
+      switch (op) {
+        case '+':
+          result = result + num;
+          document.getElementById('content').innerHTML = result;
+          break;
+        case '-':
+          result = result - num;
+          document.getElementById('content').innerHTML = result;
+          break;
+        case '*':
+          result = result * num;
+          document.getElementById('content').innerHTML = result;
+          break;
+        case '/':
+          result = result / num;
+          document.getElementById('content').innerHTML = result;
+          break;      
+        default:
+          alert('Invalid');
+          break;
+      }
     }
-    function div(num){
-      result = result / num;
-      document.getElementById('content').innerHTML = result;
-    }
-    function sub(num){
-      result = result - num;
-      document.getElementById('content').innerHTML = result;
-    }
-    function soma(num){
-      result = result + num;
-      document.getElementById('content').innerHTML = result;
-    }
+    
     document.getElementById('content').innerHTML = result;
   </script>
 
