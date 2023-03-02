@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <input type="number" id="numero" name="numero" autofocus>
+
+  <button id="bt-limpar">Limpar</button>
+  <button id="bt-calcular">Calcular</button>
+  <div id="content"></div>
+
+  <script>
+
+
+    document.getElementById('bt-calcular').addEventListener('click', function(){
+      let num = parseFloat(document.getElementById('numero').value);
+      let result = "";
+
+      for (let i = 1; i <= 1000; i++) {
+        result += num + " x " + i + " = " + (num * i) + "<br>";
+      }
+
+      document.getElementById('content').innerHTML = result;
+    });
+
+    document.getElementById('bt-limpar').addEventListener('click', function(){
+      document.getElementById('content').innerHTML = "";
+    })
+
+  </script>
+
+</body>
+</html>

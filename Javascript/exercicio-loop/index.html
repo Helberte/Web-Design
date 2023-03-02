@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+
+    var num = parseFloat(prompt("Digite um numero"));
+    var cont = 0;
+    for (let i = 1; i <= 1000; i++) {
+      document.write(num + " x " + i + " = " + (num * i) + "<br>");
+      cont++;
+      if (cont == 10) {
+        document.write("<hr>");
+        cont = 0;
+      }      
+    }
+
+  </script>
+
+</body>
+</html>
