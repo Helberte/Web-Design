@@ -8,6 +8,7 @@
 </head>
 <body>
 
+  <div id="output"></div>
   <script>
 
     var produto = {
@@ -17,8 +18,23 @@
       estoque: 10
     }
 
-   
+    var categorias = {
+      nome: 'bebidas',
+      ordem: 15
+    };
 
+    var arr = [ { nome: 'caneta', preco: 1.99}, 
+                { nome: 'lapis', preco: 2.99},
+                { nome: 'boné', preco: 4.99},
+                { nome: 'lapizeira', preco: 10.99} ];
+
+
+    var msg = '';
+    arr.forEach(element => {
+      msg += 'Produto: ' + element.nome + '; Preço: ' + element.preco + '<br>';
+    });
+
+    document.getElementById('output').innerHTML = msg;
   </script>
 
 </body>
