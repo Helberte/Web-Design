@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  background-color: #00feff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #016462;
+  height: 100vh;
+}
+*{
+  list-style-type: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h1{
+  font-weight: 600;
+}
+h2{
+  font-weight: 500;
+  font-size: 1.3em;
+}
+p{
+  font-size: .9em;
+  color: rgba(1, 100, 98,.7);
+  margin-top: .4em;
+}
+.container{
+  width: 28rem;
+  height: 25rem;
+  border: solid 1.8px rgb(0, 230, 230);
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,.1);
+  overflow: auto;
+  overflow-x: hidden;
+}
+ul li{
+  display: flex;
+  flex-direction: row;
+  padding: 1em;
+  border-bottom: solid .2px rgba(0, 230, 230, .5);
+  position: relative;
+}
+ul li:hover{
+  background-color: rgb(234,233,232);
+}
+ul li:hover a{
+  opacity: 1;
+  pointer-events: all;
+}
+.card-user img{
+  width: 5em;
+  height: 5em;
+  align-self: center;
+  border-radius: 50%;
+  margin-right: 1em;
+}
+.actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  font-size: .9em;
+}
+.actions a{
+  margin: 0 8px;
+  color: #016462b3;
+  opacity: 0;
+  pointer-events: none;
+
+  transition: all .3s ease-in-out;
+}
+.actions a:hover{
+  transform: scale(1.1);
+}
